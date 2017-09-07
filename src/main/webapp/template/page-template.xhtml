@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+
+        <f:facet name="first">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+            <title>CoreUI - Open Source Bootstrap Admin Template</title>
+
+        </f:facet>
+
+        <f:facet name="middle">
+
+            <!--<h:outputStylesheet name="layout.css"/>
+            <h:outputStylesheet name="theme.css"/> -->
+
+            <!-- Icons -->
+            <!--<link href="css/font-awesome.min.css" rel="stylesheet"/>
+            <link href="css/simple-line-icons.css" rel="stylesheet"/>-->
+            <h:outputStylesheet name="simple-line-icons.css" library="css" />
+
+            <!-- Main styles for this application -->
+            <h:outputStylesheet name="style.css" library="css"/>
+
+        </f:facet>
+
+        <f:facet name="last">
+            <h:outputStylesheet name="font-awesome.css" library="css" />
+        </f:facet>
+
+    </h:head>
+    <h:body class="app header-fixed sidebar-fixed aside-menu-fixed aside-menu-hidden">
+        <ui:debug hotkey="e"/>
+        <ui:include src="./page-header.xhtml"/>
+
+        <div class="app-body">
+            <div class="sidebar">
+                <nav class="sidebar-nav">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <h:link class="nav-link" outcome="/index">
+                                <i class="icon-speedometer"></i> DashBoard
+                            </h:link>
+                        </li>
+
+                        <li class="nav-title">
+                            Enlaces
+                        </li>
+
+                        <li class="nav-item">
+                            <h:link class="nav-link" outcome="/vistas/cliente">
+                                <i class="icon-people"></i> Clientes
+                            </h:link>
+                        </li>
+
+                        <li class="nav-item">
+                            <h:link class="nav-link" outcome="/vistas/articulo">
+                                <i class="icon-shuffle"></i> Articulos
+                            </h:link>
+
+                        </li>
+
+                        <li class="nav-item">
+                            <h:link class="nav-link" outcome="/vistas/facturar">
+                                <i class="icon-calculator"></i> Facturar
+                            </h:link>
+                        </li> 
+
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Main content -->
+            <main class="main">
+                <ui:insert name="main">
+                    <!-- /.conainer-fluid -->
+                    <div class="container-fluid">
+                        <ui:insert name="container">
+
+                        </ui:insert>
+                    </div>
+                </ui:insert>
+                <!-- /.conainer-fluid -->
+            </main>
+            <!-- Main content -->
+        </div>
+
+        <ui:include src="./page-footer.xhtml"/>
+
+        <h:outputScript library="primefaces" name="jquery/jquery.js" target="head" />
+        <h:outputScript library="omnifaces" name="fixviewstate.js" target="head" />
+
+        <!-- Bootstrap and necessary plugins -->
+        <!--<h:outputScript name="jquery.min.js" library="jquery/dist"></h:outputScript>
+        <h:outputScript name="tether.min.js" library="tether/dist/js"></h:outputScript>
+        <h:outputScript name="bootstrap.min.js" library="bootstrap/dist/js" ></h:outputScript>
+        <h:outputScript name="pace.min.js" library="pace"></h:outputScript> -->
+
+        <!--<script src="./resources/jquery/dist/jquery.min.js"></script>-->
+        <script src="./resources/tether/dist/js/tether.min.js"></script>
+        <script src="./resources/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="./resources/pace/pace.min.js"></script>
+
+        <!-- GenesisUI main scripts -->
+        <h:outputScript name="js/app.js"></h:outputScript>
+
+        <!-- Plugins and scripts required by this views -->
+
+        <!-- Custom scripts required by this view 
+        <h:outputScript name="js/views/main.js"></h:outputScript>-->
+
+    </h:body>
+
+</html>

@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:pt="http://java.sun.com/jsf/passthrough"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <f:view contentType="text/html" >
+        <ui:composition template="../template/page-template.xhtml">
+            <ui:define name="container">
+                <div class="card">
+                    <div class="card-header">
+                        Ingrese los datos del cliente
+                    </div>
+                    <div class="card-block">
+
+                        <h:form id="formRegistroCliente" class="form-horizontal" enctype="multipart/form-data" >
+                            <div class="form-group row">
+                                <label class="col-md-3 form-control-label" for="idCliente">Id Cliente</label>
+                                <div class="col-md-9">
+                                    <h:inputText id="idCliente" class="form-control" pt:placeholder="Text"/>
+                                    <span class="help-block">Id Cliente</span>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group row">
+                                <label class="col-md-3 form-control-label" for="nombreCliente">Nombres</label>
+                                <div class="col-md-9">
+                                    <h:inputText id="nombreCliente" class="form-control" pt:placeholder="Text"/>
+                                    <span class="help-block">Nombres </span>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-md-3 form-control-label" for="apellidoCliente">Apellidos</label>
+                                <div class="col-md-9">
+                                    <h:inputText id="apellidoCliente" class="form-control" pt:placeholder="Text"/>
+                                    <span class="help-block">Apellido</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-md-3 form-control-label" for="tipoDocumento">Tipo Documento</label>
+                                <div class="col-md-9">
+                                    <h:selectOneMenu id="tipoDocumento" class="form-control" >
+                                        <f:selectItem itemLabel="Seleccione Documento" itemValue="0"></f:selectItem>
+                                        <f:selectItem itemLabel="Cedula" itemValue="1"></f:selectItem>
+                                        <f:selectItem itemLabel="Pasaporte" itemValue="2"></f:selectItem>
+                                        <f:selectItem itemLabel="Otro" itemValue="3"></f:selectItem>
+                                    </h:selectOneMenu>
+                                    <span class="help-block">Seleccione el tipo del documento</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-md-3 form-control-label" for="documentoCliente">Documento</label>
+                                <div class="col-md-9">
+                                    <h:inputText id="documentoCliente" class="form-control" pt:placeholder="Text"/>
+                                    <span class="help-block">Documento Identificacion</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-md-3 form-control-label" for="telefonoCliente">Telefono</label>
+                                <div class="col-md-9">
+                                    <h:inputText id="telefonoCliente" class="form-control" pt:placeholder="Text"/>
+                                    <span class="help-block">Telefono</span>
+                                </div>
+                            </div>
+
+                        </h:form>
+                    </div>
+                    <div class="card-footer"></div>
+                </div>
+            </ui:define>
+        </ui:composition>
+    </f:view>
+</html>
+

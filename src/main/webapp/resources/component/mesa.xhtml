@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:composite="http://xmlns.jcp.org/jsf/composite">
+    <composite:interface>
+        <composite:attribute name='mesa' required='true'/>
+        <composite:attribute name='style' required="false"/>
+        <composite:attribute name='card_style' required="true"/>
+        
+    </composite:interface>
+
+    <composite:implementation>
+
+        <div class="card card-inverse #{cc.attrs.card_style} ">
+            <div class="card-block p-b-0">
+                <div class="btn-group pull-right">
+                    <button type="button" class="btn btn-transparent active dropdown-toggle p-a-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="icon-settings"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" href="#">Agregar</a>
+                        <a class="dropdown-item" href="#">Pagar</a>
+                        <a class="dropdown-item" href="#">Cancelar</a>
+                    </div>
+                </div>
+                <h4 class="m-b-0">"#{cc.attrs.mesa.montoTotal}"</h4>
+                <p>"#{cc.attrs.mesa.nombre_cuenta}"</p>
+            </div>
+            <div class="chart-wrapper p-x-1" style="height:70px;"><iframe class="chartjs-hidden-iframe" style="width: 100%; display: block; border: 0px; height: 0px; margin: 0px; position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px;"></iframe>
+                <!--<canvas id="card-chart1" class="chart chart-line" height="70" width="216" style="display: block; width: 216px; height: 70px;"></canvas>-->
+            </div>
+        </div>
+
+    </composite:implementation>
+
+</html>
